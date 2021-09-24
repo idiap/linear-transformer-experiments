@@ -30,7 +30,7 @@
             "cwd": "${workspaceFolder}/image-generation",
             "console": "integratedTerminal",
             "args": [
-                "--dataset", "mnist", "--attention_type", "full", "--d_query", "32", "--n_heads", "2", "--n_layers", "2", "--mixtures", "10", "--index", "0-10", "--offset", "1", "--recurrent", "--force_cpu", "--save_image", "images/mnist.{}.{}.png", "saves/weights.6000.pth",
+                "--dataset", "mnist", "--attention_type", "causal-linear", "--d_query", "32", "--n_heads", "2", "--n_layers", "2", "--mixtures", "10", "--index", "0-10", "--offset", "1", "--recurrent", "--force_cpu", "--save_image", "images/mnist.{}.{}.png", "saves/weights.6000.pth",
             ],
         },
         {
