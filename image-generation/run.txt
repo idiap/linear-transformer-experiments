@@ -1,0 +1,9 @@
+python main.py --dataset mnist --attention_type causal-linear \
+    --d_query 32 --n_heads 8 --n_layers 8 --mixtures 10 \
+    --batch_size 16 --iterations 937500 --evaluate_frequency 10000 \
+    --save_to /path/to/weights.{}.pth \
+    --continue_from /path/to/weights.{}.pth
+
+pip install --user pytorch-fast-transformers --no-cache-dir
+
+conda install -c anaconda cudnn

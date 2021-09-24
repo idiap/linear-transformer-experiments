@@ -60,7 +60,7 @@ class RecurrentGenerator(torch.nn.Module):
             x = torch.cat(
                 [x, pos_embedding.expand_as(x)],
                 dim=1
-            )
+            ) #TODO: why cat? should be addition
             return self.dropout(x)
 
     def __init__(self, d_model, sequence_length, mixtures,
