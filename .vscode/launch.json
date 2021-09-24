@@ -12,14 +12,25 @@
             "console": "integratedTerminal"
         },
         {
-            "name": "Python: main",
+            "name": "Python: main image generation",
             "type": "python",
             "request": "launch",
             "program": "main.py",
             "cwd": "${workspaceFolder}/image-generation",
             "console": "integratedTerminal",
             "args": [
-                "--dataset", "mnist", "--attention_type", "causal-linear", "--d_query", "32", "--n_heads", "2", "--n_layers", "2", "--mixtures", "10", "--batch_size", "16", "--iterations", "1000", "--evaluate_frequency", "10", "--save_to", "/path/to/weights.{}.pth", "--continue_from", "/path/to/weights.{}.pth",
+                "--dataset", "mnist", "--attention_type", "full", "--d_query", "32", "--n_heads", "2", "--n_layers", "2", "--mixtures", "10", "--batch_size", "2", "--iterations", "10000", "--evaluate_frequency", "1000", "--save_to", "saves/weights.{}.pth",
+            ],
+        },
+        {
+            "name": "Python: main causal copy",
+            "type": "python",
+            "request": "launch",
+            "program": "main.py",
+            "cwd": "${workspaceFolder}/causal-copy",
+            "console": "integratedTerminal",
+            "args": [
+                "--attention_type", "full", "--d_query", "8", "--n_heads", "4", "--n_layers", "2", "--batch_size", "2", "--n_classes", "20", "--save_to", "/path/to/weights.{}.pth",
             ],
         },
     ]
