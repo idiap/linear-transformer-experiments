@@ -40,13 +40,13 @@ respectively.
 
     python main.py --dataset mnist --attention_type causal-linear \
         --d_query 32 --n_heads 8 --n_layers 8 --mixtures 10 \
-        --batch_size 16 --iterations 937500 --evaluate_every 10000 \
+        --batch_size 16 --iterations 937500 --evaluate_frequency 10000 \
         --save_to /path/to/weights.{}.pth \
         --continue_from /path/to/weights.{}.pth
 
     python main.py --dataset cifar10 --attention_type causal-linear \
         --d_query 32 --n_heads 8 --n_layers 16 --mixtures 10 --lr 2e-4 \
-        --batch_size 10 --iterations 500000 --evaluate_every 10000 \
+        --batch_size 10 --iterations 500000 --evaluate_frequency 10000 \
         --save_to /path/to/weights.{}.pth \
         --continue_from /path/to/weights.{}.pth
 
